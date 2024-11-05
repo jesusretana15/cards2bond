@@ -2,7 +2,7 @@
 import {Link} from '@/i18n/routing';
 import Card from "./card";
 import styles from "./page.module.css"
-import { DotGothic16, Nunito } from 'next/font/google';
+import { Nunito } from 'next/font/google';
 import { useTranslations } from 'next-intl';
 import {useState } from 'react';
 import { redirect } from 'next/navigation'

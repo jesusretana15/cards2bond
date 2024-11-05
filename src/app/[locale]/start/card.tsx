@@ -2,7 +2,7 @@ import { ReactTyped } from "react-typed"
 import styles from "./page.module.css"
 import { useTranslations } from "next-intl"
 import { DotGothic16, Nunito } from 'next/font/google';
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode } from "react";
+
 
 
 const dotfont = DotGothic16({ subsets: ['latin'],
