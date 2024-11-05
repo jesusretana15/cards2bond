@@ -1,0 +1,113 @@
+
+  
+  .divhome{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    gap: 1.25rem;
+  }
+  
+  .button:hover,
+  .button:focus {
+    background-color: #fff;
+  }
+        
+
+  .divBtns{
+    gap: 2.5rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .h1Tittle{
+    font-size: 3rem;
+    padding-bottom:5% ;
+  }
+
+  .h2Header{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .pDescription{
+   text-align: center;
+  }
+
+  .button54 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:  #fbeee0;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: all .2s ease-in-out;
+  }
+
+    .button54Start {
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color:  #a58f79;
+      cursor: pointer;
+      border: 3px solid;
+      padding: 0.25em 0.5em;
+      box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+      position: relative;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      margin: 2rem;
+      transition: all .2s ease-in-out;
+    }
+    
+  
+  .button54:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+
+  .button54Start:hover{
+    transform: scale(1.2);
+    color:  #fbeee0;
+    
+  }
+  .button54:hover{
+    transform: scale(1.1);
+    color:  #a58f79;
+  }
+  
+
+  @media (max-width: 800px) {
+    .h2Header{
+      font-size: 1.6rem;
+      text-align: center;
+    }
+    .h1Tittle{
+      font-size: 2.5rem;
+      padding-bottom:5% ;
+    }
+  }
+
+@media (min-width: 768px) {
+  .button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}

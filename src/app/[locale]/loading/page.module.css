@@ -1,0 +1,14 @@
+.divLoading{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.h1Tittle{
+    text-align: center;
+    font-size: x-large;
+    
+}
