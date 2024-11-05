@@ -6,23 +6,25 @@ import "./globals.css";
  
 export default async function LocaleLayout({
   children,
-  params: {locale}
+  params,
 }: {
   children: React.ReactNode;
-  params: {locale: string};
+  params: { locale: string };
 }) {
- 
+  const { locale } = params;
+
+  // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
- 
-  
+
+  // Providing all messages to the client side
   const messages = await getMessages();
- 
+
   return (
     <html lang={locale}>
       <body>
-         <title>cards2bond</title>
+        <title>cards2bond</title>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
