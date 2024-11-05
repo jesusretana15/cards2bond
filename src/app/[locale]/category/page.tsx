@@ -4,7 +4,6 @@ import {useTranslations} from 'next-intl';
 import { DotGothic16, Nunito } from 'next/font/google';
 import { ReactTyped } from 'react-typed';
 import {Link} from '@/i18n/routing';
-import { useState} from "react";
 import { motion } from "framer-motion";
 
 const dotfont = DotGothic16({ subsets: ['latin'],
