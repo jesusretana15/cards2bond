@@ -4,7 +4,7 @@ import {useTranslations} from 'next-intl';
 import { DotGothic16, Nunito } from 'next/font/google';
 import { ReactTyped } from 'react-typed';
 import {Link} from '@/i18n/routing';
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { motion } from "framer-motion";
 
 const dotfont = DotGothic16({ subsets: ['latin'],
@@ -15,7 +15,6 @@ const nunito = Nunito({ weight: ['400', '700'], subsets: ['latin'] })
 
 export default function Categories() {
   const t = useTranslations('CategoryPage');
-  const [category , setCategory] = useState("")
 
   function handleClick(cat: string) {
     sessionStorage.setItem('category', cat);

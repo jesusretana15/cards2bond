@@ -11,13 +11,12 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: {locale: string};
 }) {
-  // Ensure that the incoming `locale` is valid
+ 
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
  
-  // Providing all messages to the client
-  // side is the easiest way to get started
+  
   const messages = await getMessages();
  
   return (

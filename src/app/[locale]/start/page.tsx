@@ -1,24 +1,19 @@
 "use client";
-import {Link, usePathname} from '@/i18n/routing';
+import {Link} from '@/i18n/routing';
 import Card from "./card";
 import styles from "./page.module.css"
-import { div, h1 } from "framer-motion/client";
 import { DotGothic16, Nunito } from 'next/font/google';
-import { motion } from "framer-motion";
 import { useTranslations } from 'next-intl';
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import { redirect } from 'next/navigation'
-
-const dotfont = DotGothic16({ subsets: ['latin'],
-  weight: '400'})
 
 const nunito = Nunito({ weight: ['400', '700'], subsets: ['latin'] })
 
 
 export default function Start() {
   const t = useTranslations("game");
-  const [level, setLevel] = useState(() => sessionStorage.getItem('level') || "test");
-  let currentLevel = parseInt(level);
+  const [level] = useState(() => sessionStorage.getItem('level') || "test");
+  const currentLevel = parseInt(level);
   const category = sessionStorage.getItem('category') || "test";
 
   (category === "test" || level === "test") ? redirect(  `/`) : ""
@@ -30,8 +25,7 @@ export default function Start() {
     `q10${category}${level}`
   ];
 
-  const [questions, setQuestions] = useState(() => generateQuestions(category, level));
-  const [completed, setCompleted] = useState(false);
+  const [questions] = useState(() => generateQuestions(category, level));
   const [currentQuestion, setCurrentQuestion] = useState(questions[0]);
   const [selectedIndices, setSelectedIndices] = useState([0]);
 
@@ -47,7 +41,7 @@ export default function Start() {
 
   function handleNextLevel() {
 
-    let nextLevel = (currentLevel + 1).toString();
+    const nextLevel = (currentLevel + 1).toString();
     sessionStorage.setItem('level', nextLevel);
    
   }

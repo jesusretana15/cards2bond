@@ -1,16 +1,16 @@
 import { ReactTyped } from "react-typed"
 import styles from "./page.module.css"
 import { useTranslations } from "next-intl"
-import { span } from "framer-motion/client"
 import { DotGothic16, Nunito } from 'next/font/google';
-import { useEffect, useState } from 'react';
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode } from "react";
+
 
 const dotfont = DotGothic16({ subsets: ['latin'],
   weight: '400'})
 
 const nunito = Nunito({ weight: ['400', '700'], subsets: ['latin'] })
 
-export default function Card(props: any){
+export default function Card(props: { category: string; question: string; level: string | number }){
     const t = useTranslations("CategoryPage")
 
 
