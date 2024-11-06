@@ -2,21 +2,16 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
-import { useLocale } from 'next-intl';
-
-
-type Params = Promise<{ locale: string }>
-
 import "./globals.css"; 
 
 export default async function LocaleLayout({
-   children
+  children,
+  params: {locale}
 }: {
-  children?: React.ReactNode;
-  params: Params;
+  children: React.ReactNode;
+  params: {locale: string};
 }) {
-  
-  const locale = useLocale();
+  // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
