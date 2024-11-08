@@ -5,7 +5,6 @@ import {routing} from '@/i18n/routing';
 import './globals.css';
 import { ReactNode } from 'react';
 import { Analytics } from "@vercel/analytics/react"
-import Head from 'next/head';
 
 type Props = {
   children: ReactNode;
@@ -31,12 +30,10 @@ export default async function LocaleLayout({children}: Props) {
 
   return (
     <html lang={locale}>
-        <Head>
-        <title>cards2bond</title>
-        <meta name="description" content={metaDescription} />
-        <link rel="alternate" hrefLang="en" href="https://yourwebsite.com/en" />
-        <link rel="alternate" hrefLang="es" href="https://yourwebsite.com/es" />
-      </Head>
+      <head>
+      <title>cards2bond</title>
+      <meta name="description" content={metaDescription} />
+      </head>
       <body
       >
         <NextIntlClientProvider messages={messages}>
