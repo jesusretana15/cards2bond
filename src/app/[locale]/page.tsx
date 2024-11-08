@@ -1,6 +1,7 @@
 "use client";
 import {useTranslations} from 'next-intl';
 import {Link} from '@/i18n/routing';
+import { useRouter } from 'next/navigation';
 import styles from "./page.module.css"
 import { DotGothic16, Nunito } from 'next/font/google';
 import { ReactTyped } from 'react-typed';
@@ -12,9 +13,12 @@ const dotfont = DotGothic16({ subsets: ['latin'],
 const nunito = Nunito({ weight: ['400', '700'], subsets: ['latin'] })
 
 export default function HomePage() {
+  const router = useRouter();
   const t = useTranslations('HomePage');
   sessionStorage.setItem('level', '1');
   sessionStorage.setItem('category', 'strangers');
+ 
+
   
   return (
  
@@ -47,8 +51,8 @@ export default function HomePage() {
     </motion.div>
     
     <div className={styles.divBtns}>
-    <Link href="es"><button className={`${styles.button54} ${nunito.className}`}>español</button></Link>   
-    <Link href="en"><button className={`${styles.button54} ${nunito.className}`}>english</button></Link>   
+     <button onClick={()=> router.push('/es')}className={`${styles.button54} ${nunito.className}`}>español</button> 
+     <button onClick={()=> router.push('/en')} className={`${styles.button54} ${nunito.className}`}>english</button> 
     </div>
 
     </div>
