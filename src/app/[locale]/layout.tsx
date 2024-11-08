@@ -4,6 +4,7 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import './globals.css';
 import { ReactNode } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 
 type Props = {
   children: ReactNode;
@@ -31,6 +32,7 @@ export default async function LocaleLayout({children}: Props) {
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <Analytics/>
       </body>
     </html>
   );
