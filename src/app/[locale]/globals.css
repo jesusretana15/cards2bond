@@ -19,6 +19,6 @@ body {
   background: var(--background);
   height: 100vh;
   display: flex;
- 
+  overflow: hidden;
   margin: 0; /* Ensures no default body margin */
 }
